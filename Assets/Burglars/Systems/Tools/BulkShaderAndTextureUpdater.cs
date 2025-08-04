@@ -9,7 +9,7 @@ public class BulkShaderAndTextureUpdater : MonoBehaviour
     {
         string folderPath = "Assets/Vox Models/Dynamics"; // Cambia esto a la carpeta que contiene tus .asset
         string shaderName = "Universal Render Pipeline/Unlit";
-        string textureProperty = "_MainTex"; // Cambia si tu shader usa otro nombre
+        string textureProperty = "BaseMap"; // Cambia si tu shader usa otro nombre
 
         Shader newShader = Shader.Find(shaderName);
         if (newShader == null)
@@ -19,7 +19,7 @@ public class BulkShaderAndTextureUpdater : MonoBehaviour
         }
 
         string[] assetFiles = Directory.GetFiles(folderPath, "*.asset", SearchOption.AllDirectories);
-
+        Debug.Log("#" + assetFiles.Length);
         foreach (string path in assetFiles)
         {
             var asset = AssetDatabase.LoadAssetAtPath<GameObject>(path);
