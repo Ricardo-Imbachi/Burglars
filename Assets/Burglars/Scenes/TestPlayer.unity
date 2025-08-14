@@ -4544,6 +4544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 1626504575}
+  playerCamera: {fileID: 0}
   moveSpeed: 5
   sprintMultiplier: 2
 --- !u!23 &1626504572
